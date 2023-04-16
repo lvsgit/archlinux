@@ -3,11 +3,22 @@ if status is-interactive
 end
 
 # Start X at login
-if status --is-login
-  if test -z "$DISPLAY" -a $XDG_VTNR = 1
-    exec startx -- -keeptty
-  end
-end
+# if status --is-login
+#   if test -z "$DISPLAY" -a $XDG_VTNR = 1
+#     exec startx -- -keeptty
+#   end
+# end
+
+# export GTK_IM_MODULE=ibus
+# export QT_IM_MODULE=ibus
+# export XMODIFIERS=@im=ibus
+set -x GTK_IM_MODULE ibus
+set -x QT_IM_MODULE ibus
+set -x XMODIFIERS @im ibus
+ibus-daemon -drx
+#export TERM = terminator
+
+
 
 # Ui for fish
 set -g -x fish_greeting 'Welcome lvs'

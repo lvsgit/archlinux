@@ -1,0 +1,22 @@
+git clone https:/aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si --noconfirm
+
+
+echo "now the system is installing!"
+yay -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant
+yay -S dialog wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-headers
+yay -S bluez bluez-utils cups git xdg-utils xdg-user-dirs hyprland-git kitty waybar-hyprland
+yay -S swww rofi xf86-video-qxl xf86-video-intel nvidia nvidia-utils kitty thunar xdg-desktop-portal-hyprland-git
+yay -S polkit-gnome python-requests pamixer pavucontrol brightnessctl blueman network-manager-applet
+yay -S gvfs thunar-archive-plugin file-roller btop pacman-contrib starship ttf-fantasque-nerd
+yay -S lxappearance xfce4-settings sddm-git ibus ibus-bamboo pipewire wireplumber pipewire-audio
+yay -S xdg-desktop-portal polkit-kde-agent qt5-wayland qt6-wayland pipewire-pulse pipewire-jack sof-firmware alsa-ucm-conf 
+yay -S ttf-dejavu ttf-liberation noto-fonts
+
+sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
+sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
+
+echo "Installed"

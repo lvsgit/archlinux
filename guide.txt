@@ -1,0 +1,21 @@
+# After install 
+sudo systemctl restart NetwokManager
+
+sudo systemctl enable bluetooth.service
+
+sudo systemctl enable sddm
+
+yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gnome-gtk
+
+
+
+
+
+
+
+cp extras/hyprland.desktop /usr/share/wayland-sessions
+cp extras/start-hypr ~/
+chmod +x start-hypr
+
+# End install
+sudo systemctl start sddm 

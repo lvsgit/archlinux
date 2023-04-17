@@ -12,7 +12,7 @@ yay -S polkit-gnome python-requests pamixer pavucontrol brightnessctl blueman ne
 yay -S gvfs thunar-archive-plugin file-roller btop pacman-contrib starship ttf-fantasque-nerd
 yay -S lxappearance xfce4-settings sddm-git ibus ibus-bamboo pipewire wireplumber pipewire-audio
 yay -S xdg-desktop-portal polkit-kde-agent qt5-wayland qt6-wayland pipewire-pulse pipewire-jack sof-firmware alsa-ucm-conf 
-yay -S ttf-dejavu ttf-liberation noto-fonts
+yay -S ttf-dejavu ttf-liberation noto-fonts stacer
 
 sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
 sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
